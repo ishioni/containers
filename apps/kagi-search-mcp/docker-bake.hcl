@@ -1,16 +1,16 @@
 target "docker-metadata-action" {}
 
 variable "APP" {
-  default = "postgres-init"
+  default = "kagi-search-mcp"
 }
 
 variable "VERSION" {
-  // renovate: datasource=docker depName=docker.io/library/postgres versioning=docker
-  default = "18.3-alpine3.23"
+  // renovate: datasource=pypi depName=kagimcp versioning=pep440
+  default = "0.1.5"
 }
 
 variable "SOURCE" {
-  default = "https://github.com/postgres/postgres"
+  default = "https://github.com/kagisearch/kagimcp"
 }
 
 group "default" {
